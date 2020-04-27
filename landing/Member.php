@@ -29,14 +29,14 @@ class Member
         if($valid == true) {
             // Password Matching Validation
             if ($_POST['password'] != $_POST['confirm_password']) {
-                $errorMessage[] = 'Passwords should be same.';
+                $errorMessage[] = 'Паролі мають співпадати.';
                 $valid = false;
             }
             
             // Email Validation
             if (! isset($error_message)) {
                 if (! filter_var($_POST["userEmail"], FILTER_VALIDATE_EMAIL)) {
-                    $errorMessage[] = "Invalid email address.";
+                    $errorMessage[] = "Неправильна email адреса.";
                     $valid = false;
                 }
             }
@@ -44,13 +44,13 @@ class Member
             // Validation to check if Terms and Conditions are accepted
             if (! isset($error_message)) {
                 if (! isset($_POST["terms"])) {
-                    $errorMessage[] = "Accept terms and conditions.";
+                    $errorMessage[] = "Погодьтеся з Угодою користувача.";
                     $valid = false;
                 }
             }
         }
         else {
-            $errorMessage[] = "All fields are required.";
+            $errorMessage[] = "Потрібно ввести всі поля.";
         }
         
         if ($valid == false) {

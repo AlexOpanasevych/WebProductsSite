@@ -25,13 +25,13 @@ if(count($_POST)>0) {
     <div class="demo-table">
         <div class="form-head">Вхід</div>
 		<div class="field-column">
-			<label  align="center" colspan="2">Ім'я користувача</label>
+			<label>Ім'я користувача</label>
             <div>
-                <input type="text" name="userName" placeholder="Введіть м'я користувача" class="demo-input-box">
+                <input type="text" name="userName" placeholder="Введіть ім'я користувача" class="demo-input-box">
             </div>
         </div>
         <div class="field-column">
-            <label>Введіть пароль</label>
+            <label>Пароль</label>
             <input type="password" name="password" placeholder="Введіть пароль" class="demo-input-box">
         </div>
         <div>
